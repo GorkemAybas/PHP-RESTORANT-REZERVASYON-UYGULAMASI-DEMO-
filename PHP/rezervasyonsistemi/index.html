@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rezervasyon Sistemi</title>
+<!-- Site iconu başlangıç -->
+<link rel="shortcut icon" href="../sitedosyalari/resimler/ico/ico.ico" />
+<!-- Site iconu bitiş -->
+<!-- css dosyası oluşturdum ve dışarıdan içeri çağırdım -->
+<link rel="stylesheet" type="text/css" href="../sitedosyalari/css/tasarim.css" />
+<style type="text/css">
+body{
+  background:url("../sitedosyalari/resimler/arkaplan/3koyu.jpg");
+        background-repeat:no-repeat;
+      background-size: cover;
+}
+</style>
+<!-- javascript 3.3.1 başlangıç -->
+<script type="text/javascript" src="../sitedosyalari/kutuphaneler/js/jquery-3.3.1.min.js"></script>
+<!-- javascript 3.3.1 bitiş -->
+  <!-- rezervasyon koşulları pop-up ı çalıştıran kod başlangıç -->
+<SCRIPT LANGUAGE="JavaScript">
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 468,top = 232');");
+}
+</script>
+<!-- rezervasyon koşulları pop-up ı çalıştıran kod bitiş -->
+</head>
+<body>
+<center><font color="white" face="georgia">
+  <!-- üst site menüleri başlangıç -->
+<table width="860">
+  <tr>
+  <td width="143">
+         </td>
+         <td width="72">
+         <a href="../iletisim.html"><font >İletişim</font></a>
+    </td>
+     <td width="412">
+         <a href="../index.html"><img src="../sitedosyalari/resimler/logo.png" width="400" height="140"></a>
+             </td>
+     <td width="142">
+        <a href="index.html"><font >Rezervasyon</font></a>
+            </td>
+     <td width="63">
+     </td>
+</tr>  </table> <a href="../adminpaneli/admin_paneli.php"><font color="white" size="4">ADMİN PANELİ</font></a> </center>
+  <!-- üst site menüleri bitiş -->
+</font>
+<font color="white" face="arial">
+  <style>
+    .form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 65vh;         
+}
+  </style>
+  <div class="form-container">
+<br> <br> <br> <br> <br> 
+<form method="post" action="ekle.php" >
+    <table width="826" border="0">
+        <tr>
+            <td width="167">Adınz:</td>
+            <td width="213"><input type="text" name="ad" required class="yaziKutusu" autofocus/></td> <!-- class="yaziKutusu" css de yaptigim text kutusu tasarımını çağırıyo. required mutlaka yazılması gerektiğini belirler-->
+            <td width="199">Mail Adresiniz:</td>
+            <td width="229"><input type="email" name="mail" id="mail"  placeholder="Rezervasyon kodu gönderilecek" required class="yaziKutusu"/></td>
+        </tr>
+        <tr>
+            <td>Soyadınız:</td>
+            <td><input type="text" name="soyad" required class="yaziKutusu"/></td>
+            <td>Misafir Sayısı:</td>
+            <td><input type="number" pattern="[0-50]" name="misafir" required placeholder="Siz hariç" class="yaziKutusu"/></td>
+        </tr>
+        <tr>
+            <td width="167">Telefon numaranız:</td>
+            <td width="213"><input type="tel" name="telefon" pattern="[0-9]{10}"  placeholder="Başında sıfır olmadan" required class="yaziKutusu"/></td>
+
+
+            <td>Tarih:</td>
+            <td><input type="datetime-local" name="tarih" required class="yaziKutusu"/></td>
+
+        </tr>
+        <tr>
+        	<td>Rezervasyon Türü:</td>
+        	<td>
+<div class="select">
+<select name="turu">
+  <option selected="selected" value="Aksam_Yemegi">Akşam Yemeği</option>
+  <option value="Dogum_Gunu">Doğum Günü</option>
+    <option value="Yıl_Donumu">Yıl Dönümü</option>
+  <option value="Sirket">Şirket</option>
+  <option value="Tatil">Tatil</option>
+  <option value="Diger">Diğer</option>
+</select>
+    <div class="select_arrow">
+    </div>
+</div>
+			</td>
+        	<td>
+              <form>
+              <input class="ikinciButon" type=button value="Rezervasyon Koşulları" onClick="javascript:popUp('rezervasyonkosullari.html')">
+              </form>
+   	        </td>
+        	<td><input type="reset" name="sil" id="sil" value="Temizle" class="normalButon" /> <!-- class="normalButon" css de yaptigim buton tasarımını çağırıyo. -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	  <font color="white"></font>
+   	          <input type="submit" value="Gönder" class="normalButon" /></td>
+        </tr>
+    </table>
+  </form>
+  <br><br>
+  <hr width="37%">
+<br />
+</font>
+</center>
+</div>
+</body>
+</html>

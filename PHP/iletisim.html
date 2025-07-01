@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rezervasyon Sistemi</title>
+<!-- Site iconu başlangıç -->
+<link rel="shortcut icon" href="sitedosyalari/resimler/ico/ico.ico" />
+<!-- Site iconu bitiş -->
+<!-- css dosyası oluşturdum ve dışarıdan içeri çağırdım -->
+<link rel="stylesheet" type="text/css" href="sitedosyalari/css/tasarim.css" />
+<style type="text/css">
+body{
+  background:url("sitedosyalari/resimler/arkaplan/6koyu.jpg");
+        background-repeat:no-repeat;
+      background-size: cover;
+}
+</style>
+<!-- javascript 3.3.1 başlangıç -->
+<script type="text/javascript" src="sitedosyalari/kutuphaneler/js/jquery-3.3.1.min.js"></script>
+<!-- javascript 3.3.1 bitiş -->
+<center>
+    <font color="white" face="georgia">
+<!-- üst site menüsü başlangıç -->
+<table width="856">
+  <tr>
+  <td width="143">
+         </td>
+         <td width="72">
+         <a href="iletisim.html">İletişim</a>
+    </td>
+     <td width="412">
+         <a href="index.html"><img src="sitedosyalari/resimler/logo.png" width="400" height="140"></a>
+             </td>
+     <td width="142">
+
+        <a href="rezervasyonsistemi/index.html">Rezervasyon</a>
+            </td>
+     <td width="63"> 
+     
+     </td>
+</tr></table>
+<!-- üst site menüsü bitiş -->
+<a href="adminpaneli/admin_paneli.php"><font color="white" size="4">ADMİN PANELİ</font></a> </center>
+</font>
+    <font face="arial" color="white">
+<br /><br />
+
+<div style="position: absolute; overflow: hidden; left: 37%;">
+  <h3><i><center> <p style="margin-left: 30%;">İletişim Formu </p> </center></i></h3>
+  
+<form method="post" action="mesajsistemi/mesajkayit.php">
+<input name="id" type="hidden" value="1775">
+<table cellpadding="10px" border="0">
+<tr>
+<td align="right">Adınız: </td>
+<td><input name="ad" type="text" class="yaziKutusu"></td>
+</tr>
+<tr>
+<td align="right">Soyadınız: </td>
+<td><input name="soyad" type="text" class="yaziKutusu"></td>
+</tr>
+<tr>
+<td align="right">Mail Adresiniz: </td>
+<td><input name="mailadresi" type="email" class="yaziKutusu"></td>
+</tr>
+<tr>
+<td align="right">Konu: </td>
+<td><input name="konu" type="text" class="yaziKutusu"></td>
+</tr>
+<tr>
+<td align="right" valign="top" >Mesajınız: </td>
+<td>
+<textarea rows="10" cols="17" name="mesaj">
+</textarea></td>
+</tr>
+<tr>
+<td></td>
+<td align="center">
+<input value="Gönder" class="normalButon" name="send" type="submit" id="send" style="width:100;color:#ff0000;"></td>
+</tr>
+
+</table>
+<p>&nbsp;</p>
+
+</form>
+</div>
+</font>
+</center> <center>
+
+</body>
+</html>
